@@ -1,4 +1,4 @@
-name:  MopWrt-内核6.1-精简版
+name:  OpenWrt-内核6.1-精简版
 
 on: 
   workflow_dispatch:
