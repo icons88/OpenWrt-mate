@@ -3,7 +3,8 @@
 
 
 # 0-设置主机名
-sed -i "s/hostname='OpenWrt'/hostname='RopWrt'/g" package/base-files/files/bin/config_generate
+# sed -i "s/hostname='OpenWrt'/hostname='RopWrt'/g" package/base-files/files/bin/config_generate
+sed -i "s/hostname='OpenWrt'/hostname='MopWrt'/g" package/base-files/files/bin/config_generate
 
 # 1-设置默认主题
 sed -i 's/bootstrap/opentomcat/g' ./feeds/luci/collections/luci/Makefile
