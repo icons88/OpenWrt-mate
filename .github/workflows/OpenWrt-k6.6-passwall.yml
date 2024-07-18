@@ -1,4 +1,4 @@
-name:  RopWrt-内核6.6-标准版
+name:  RopWrt-k6.6-passwall
 
 on: 
   workflow_dispatch:
