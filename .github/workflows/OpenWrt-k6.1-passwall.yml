@@ -1,4 +1,4 @@
-name:  OpenWrt-内核6.1-标准版
+name:  OpenWrt-k6.1-passwall
 
 on: 
   workflow_dispatch:
