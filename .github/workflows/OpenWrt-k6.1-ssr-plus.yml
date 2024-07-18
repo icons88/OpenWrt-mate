@@ -1,4 +1,4 @@
-name:  OpenWrt-k6.1-ssr-plus
+name:  MopWrt-k6.1-ssr-plus
 
 on: 
   workflow_dispatch:
