@@ -1,4 +1,4 @@
-name:  RopWrt-内核6.6-精简版
+name:  RopWrt-k6.6-ssr-plus
 
 on: 
   workflow_dispatch:
