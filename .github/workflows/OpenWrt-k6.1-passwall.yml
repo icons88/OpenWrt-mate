@@ -1,4 +1,4 @@
-name:  OpenWrt-k6.1-passwall
+name:  MopWrt-k6.1-passwall
 
 on: 
   workflow_dispatch:
