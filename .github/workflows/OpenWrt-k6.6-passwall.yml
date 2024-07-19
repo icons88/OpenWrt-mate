@@ -140,7 +140,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt-${{ env.KERNEL }}-Stable${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt-k6.6-Stable${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 创建发布标签
