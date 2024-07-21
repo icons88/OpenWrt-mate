@@ -3,7 +3,7 @@
 
 
 # 设置主机名
-# sed -i 's/OpenWrt/MopWrt/g' package/base-files/files/bin/config_generate
+# sed -i 's/OpenWrt/EopWrt/g' package/base-files/files/bin/config_generate
 sed -i "s/hostname='OpenWrt'/hostname='MopWrt'/g" package/base-files/files/bin/config_generate
 
 # 设置默认主题
