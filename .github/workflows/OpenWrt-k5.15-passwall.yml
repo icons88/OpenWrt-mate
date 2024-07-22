@@ -3,7 +3,7 @@ name:  EopWrt-k5.15-passwall
 on: 
   workflow_dispatch:
   schedule:
-    - cron: 01 00 * * 5
+    - cron: 20 00 * * 5
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
