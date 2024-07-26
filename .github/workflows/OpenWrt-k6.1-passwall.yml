@@ -3,7 +3,7 @@ name:  MopWrt-k6.1-passwall
 on: 
   workflow_dispatch:
   schedule:
-    - cron: 30 00 * * 5
+    - cron: 29 00 * * 5
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -140,7 +140,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt-k6.1-Stable${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt-k6.1-passwall${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 创建发布标签
@@ -149,10 +149,10 @@ jobs:
       run: |
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "MopWrt-x86_64-内核6.1-标准版（支持ipv6）" >> release.txt
+        echo "MopWrt-x86_64-内核6.1-passwall版（支持ipv6）" >> release.txt
         echo "默认地址：100.1.1.1" >> release.txt
         echo "默认密码：无密码" >> release.txt
-        echo "包含插件：PassWall、SmartDNS、adguardhome、UU游戏加速、Turbo ACC网络加速" >> release.txt
+        echo "包含插件：PassWall、SmartDNS、adguardhome、Turbo ACC网络加速" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 发布新版固件
@@ -161,7 +161,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} 内核6.1标准版
+        name: ${{ env.FILE_TIME }} 内核6.1 passwall版
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
