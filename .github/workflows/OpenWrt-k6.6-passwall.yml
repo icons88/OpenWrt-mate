@@ -9,7 +9,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 6.6/OK3.config
+  CONFIG_FILE: 6.6/OK2.config
   DIY_P1_SH: 6.6/DIY-1.sh
   DIY_P2_SH: 6.6/DIY-2.sh
   UPLOAD_FIRMWARE: true
@@ -140,7 +140,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt-k6.6-Stable${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt-k6.6-passwall${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 创建发布标签
@@ -149,10 +149,10 @@ jobs:
       run: |
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "RopWrt-x86_64-内核6.6-标准版（支持ipv6）" >> release.txt
+        echo "RopWrt-x86_64-内核6.6-passwall版（支持ipv6）" >> release.txt
         echo "默认地址：100.1.1.1" >> release.txt
         echo "默认密码：无密码" >> release.txt
-        echo "包含插件：PassWall、SmartDNS、adguardhome、UU游戏加速、Turbo ACC网络加速" >> release.txt
+        echo "包含插件：PassWall、SmartDNS、adguardhome、Turbo ACC网络加速" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 发布新版固件
@@ -161,7 +161,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} 内核6.6标准版
+        name: ${{ env.FILE_TIME }} 内核6.6 passwall版
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
