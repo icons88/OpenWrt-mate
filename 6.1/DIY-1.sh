@@ -14,9 +14,6 @@ git clone https://github.com/icons88/luci-theme-opentomcat.git package/luci-them
 # 添加adguardhome插件
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
-# 添加uugamebooster插件
-git clone https://github.com/aUsernameWoW/uugamebooster.git package/luci-app-uugamebooster
-
 # 添加OpenClash插件
 sed -i '$a\src-git openclash https://github.com/vernesong/OpenClash' ./feeds.conf.default
 
