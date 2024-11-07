@@ -7,7 +7,7 @@
 sed -i "s/hostname='OpenWrt'/hostname='EopWrt'/g" package/base-files/files/bin/config_generate
 
 # 设置默认主题
-sed -i 's/bootstrap/opentomcat/g' ./feeds/luci/collections/luci/Makefile
+# sed -i 's/bootstrap/opentomcat/g' ./feeds/luci/collections/luci/Makefile
 
 # 设置管理地址
 sed -i 's/192.168.1.1/100.1.1.1/g' package/base-files/files/bin/config_generate
