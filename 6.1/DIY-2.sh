@@ -2,15 +2,9 @@
 #============================================================================================
 
 
-# 设置主机名
-# sed -i 's/OpenWrt/MopWrt/g' package/base-files/files/bin/config_generate
-sed -i "s/hostname='OpenWrt'/hostname='MopWrt'/g" package/base-files/files/bin/config_generate
-
-# 设置默认主题
-sed -i 's/bootstrap/opentomcat/g' ./feeds/luci/collections/luci/Makefile
-
-# 设置管理地址
-sed -i 's/192.168.1.1/100.1.1.1/g' package/base-files/files/bin/config_generate
+# 替换新版 golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 
 # 编译内核版本
 # sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
