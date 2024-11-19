@@ -1,4 +1,4 @@
-name:  EopWrt-k5.15-passwall
+name:  OpenWrt-k5.15-passwall
 
 on: 
   workflow_dispatch:
