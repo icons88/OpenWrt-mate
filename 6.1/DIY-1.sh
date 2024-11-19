@@ -1,5 +1,5 @@
 # ShadowSocksR Plus+
-sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 
 # adguardhome
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
