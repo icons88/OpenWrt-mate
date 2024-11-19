@@ -149,10 +149,10 @@ jobs:
       run: |
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "EopWrt-x86_64-内核5.15-passwall版（支持ipv6）" >> release.txt
-        echo "默认地址：192.168.1.1" >> release.txt
-        echo "默认密码：无密码" >> release.txt
-        echo "包含插件：PassWall、SmartDNS、adguardhome、UU游戏加速、Turbo ACC网络加速" >> release.txt
+        echo "OpenWrt-x86_64-k5.15-passwall（ipv6）" >> release.txt
+        echo "地址：192.168.1.1" >> release.txt
+        echo "密码：无密码" >> release.txt
+        echo "插件：PassWall、SmartDNS、adguardhome、UUgame、Turboacc" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 发布新版固件
