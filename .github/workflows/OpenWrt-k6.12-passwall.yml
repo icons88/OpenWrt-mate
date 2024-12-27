@@ -9,9 +9,9 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 6.1/OK2.config
-  DIY_P1_SH: 6.1/DIY-1.sh
-  DIY_P2_SH: 6.1/DIY-2.sh
+  CONFIG_FILE: 6.12/OK2.config
+  DIY_P1_SH: 6.12/DIY-1.sh
+  DIY_P2_SH: 6.12/DIY-2.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
@@ -141,7 +141,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt-k6.1-passwall${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt-k6.12-passwall${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: 创建发布标签
