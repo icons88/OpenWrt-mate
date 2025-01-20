@@ -14,6 +14,6 @@ git clone https://github.com/WukongMaster/luci-app-poweroff.git package/luci-app
 # sed -i '$a\src-git openclash https://github.com/vernesong/OpenClash' ./feeds.conf.default
 
 # 添加 PassWall 插件
-echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
+echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall/tree.git;4.78-4" >> "feeds.conf.default"
 echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
 
