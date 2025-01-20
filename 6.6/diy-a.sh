@@ -16,3 +16,6 @@ git clone https://github.com/WukongMaster/luci-app-poweroff.git package/luci-app
 # 添加 PassWall 插件
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;4.78-4" >> "feeds.conf.default"
 echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;4.78-4" >> "feeds.conf.default"
+
+# 添加 uugamebooster 插件并锁定版本为 7.9.14-15
+echo "src-git uugamebooster https://example.com/uugamebooster.git;7.9.14-15" >> "feeds.conf.default"
