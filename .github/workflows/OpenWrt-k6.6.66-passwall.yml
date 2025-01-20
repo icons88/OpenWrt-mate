@@ -6,12 +6,12 @@ on:
     - cron: 30 00 * * 5
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/icons88/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 6.6/OK2.config
   DIY_P1_SH: 6.6/DIY-1.sh
-  DIY_P2_SH: 6.6/diy-b.sh
+  DIY_P2_SH: 6.6/DIY-2.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
@@ -162,7 +162,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} 内核6.6 passwall版
+        name: ${{ env.FILE_TIME }} 内核6.6.66 passwall版
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
