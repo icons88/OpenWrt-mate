@@ -2,8 +2,8 @@ name:  OpenWrt-k6.6.66-passwall
 
 on: 
   workflow_dispatch:
-  schedule:
-    - cron: 30 00 * * 5
+  #schedule:
+  #  - cron: 30 00 * * 5
 
 env:
   REPO_URL: https://github.com/icons88/lede
