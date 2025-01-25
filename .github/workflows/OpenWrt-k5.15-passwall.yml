@@ -1,4 +1,4 @@
-name:  OpenWrt-k5.15-passwall
+name:  OpenWrt-x86_64-k5.15
 
 on: 
   workflow_dispatch:
@@ -152,7 +152,7 @@ jobs:
         echo "OpenWrt-x86_64-k5.15-passwall（ipv6）" >> release.txt
         echo "地址：192.168.2.1" >> release.txt
         echo "密码：无密码" >> release.txt
-        echo "插件：PassWall、SmartDNS、adguardhome、UUgame、Turboacc" >> release.txt
+        echo "插件：PassWall、ShadowSocksR Plus+、MosDNS、SmartDNS、adguardhome、UUgame、Turboacc" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 发布新版固件
@@ -161,7 +161,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} 内核5.15 passwall版
+        name: ${{ env.FILE_TIME }} 内核5.15 版本
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
