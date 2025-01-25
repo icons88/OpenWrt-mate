@@ -11,7 +11,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 6.6/OK2.config
   DIY_P1_SH: 6.6/DIY-0.sh
-  DIY_P2_SH: 6.6/DIY-2.sh
+  DIY_P2_SH: 6.6/DIY-3.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
@@ -151,7 +151,7 @@ jobs:
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
         echo "OpenWrt-x86_64-k6.6.66-passwall（ipv6）" >> release.txt
-        echo "地址：192.168.2.1" >> release.txt
+        echo "地址：100.1.1.1" >> release.txt
         echo "密码：无密码" >> release.txt
         echo "插件：PassWall、SmartDNS、adguardhome、UUgame、Turboacc" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
