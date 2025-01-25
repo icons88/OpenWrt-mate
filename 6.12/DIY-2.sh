@@ -1,8 +1,8 @@
 # 修改管理地址
-sed -i 's/192.168.1.1/100.1.1.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名称
-sed -i "s/hostname='LEDE'/hostname='MinGwrt'/g" package/base-files/files/bin/config_generate
+#sed -i "s/hostname='LEDE'/hostname='MinGwrt'/g" package/base-files/files/bin/config_generate
 
 # 修改内核版本
 sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' ./target/linux/x86/Makefile
