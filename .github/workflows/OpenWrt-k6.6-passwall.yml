@@ -1,4 +1,4 @@
-name:  OpenWrt-k6.6-passwall
+name:  OpenWrt-x86_64-k6.6
 
 on: 
   workflow_dispatch:
@@ -9,7 +9,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 6.6/OK2.config
+  CONFIG_FILE: 6.6/OK1.config
   DIY_P1_SH: 6.6/DIY-1.sh
   DIY_P2_SH: 6.6/DIY-2.sh
   UPLOAD_FIRMWARE: true
@@ -153,7 +153,7 @@ jobs:
         echo "OpenWrt-x86_64-k6.6-passwall（ipv6）" >> release.txt
         echo "地址：192.168.2.1" >> release.txt
         echo "密码：无密码" >> release.txt
-        echo "插件：PassWall、SmartDNS、adguardhome、UUgame、Turboacc" >> release.txt
+        echo "插件：PassWall、ShadowSocksR Plus+、MosDNS、SmartDNS、adguardhome、UUgame、Turboacc" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 发布新版固件
@@ -162,7 +162,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} 内核6.6 passwall版
+        name: ${{ env.FILE_TIME }} 内核6.6 版本
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
