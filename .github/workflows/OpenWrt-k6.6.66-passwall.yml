@@ -6,12 +6,12 @@ on:
   #  - cron: 30 00 * * 5
 
 env:
-  REPO_URL: https://github.com/icons88/lede
+  REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 6.6/OK2.config
-  DIY_P1_SH: 6.6/DIY-0.sh
-  DIY_P2_SH: 6.6/DIY-3.sh
+  DIY_P1_SH: 6.6/DIY-1.sh
+  DIY_P2_SH: 6.6/DIY-2.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
