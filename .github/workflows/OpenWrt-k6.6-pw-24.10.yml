@@ -1,4 +1,4 @@
-name:  OpenWrt-k6.6.66-passwall
+name:  OpenWrt-k6.6-passwall-24.10
 
 on: 
   workflow_dispatch:
