@@ -1,4 +1,4 @@
-name:  MinGwrt-x86_64-k6.1
+name:  MING-x86_64-k6.1
 
 on: 
   workflow_dispatch:
@@ -6,11 +6,11 @@ on:
   #  - cron: 29 00 * * 5
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/icons88/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 6.1/OK3.config
-  DIY_P1_SH: 6.1/DIY-1.sh
+  DIY_P1_SH: 6.1/DIY-0.sh
   DIY_P2_SH: 6.1/DIY-3.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
